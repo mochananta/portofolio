@@ -1,0 +1,112 @@
+    /* CARDS */
+    .card-profile {
+        border: none;
+        background-color: #afa6a63a;
+        border: 1px solid #000000;
+        border-radius: 31px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card-profile:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-profile-link:hover {
+        transition: all 0.2s ease-in-out;
+        color: #4f8dcf;
+        background-color: #f9fcff;
+    }
+
+    .card-profile-link:active {
+        color: #264c74;
+        background-color: #e8f3ff;
+    }
+
+    .card-profile-link {
+        border: none;
+        box-shadow: 0px 8px 27px rgba(0, 0, 0, 0.11);
+        border-radius: 16px;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card-profile-link:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-share {
+        padding: 10px;
+        border: none;
+        border-radius: 20px;
+    }
+
+    .card-share.coding {
+        background: #F0FFFA;
+        border: 1px solid #3FAB87;
+    }
+
+    .card-share.ui-ux {
+        background: #afa6a63a;
+        border: 1px solid #000000;
+    }
+
+    /* END OF CARDS */
+
+    .img-circle {
+        border-radius: 50%;
+        border: 2px solid #000000;
+        width: 150px;
+    }
+
+    .letter-spacing-1 {
+        letter-spacing: 1px;
+    }
+
+    .text-grey-small {
+        color: #a4a3a3;
+    }
+
+    .text-grey-medium {
+        color: #7C7C7C;
+    }
+
+    .text-grey-bold {
+        color: #606060;
+    }
+
+    .btn-kitab {
+        background-color: white !important;
+        border-radius: 30px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.06);
+    }
+
+    .btn-skil {
+        font-size: 12px !important;
+    }
+
+    .font {
+        font-size: 25px;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animated {
+        animation-duration: 0.8s;
+        animation-fill-mode: both;
+    }
+
+    .fadeInUp {
+        animation-name: fadeInUp;
+    }
