@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kementerian Agama Kabupaten Banyuwangi</title>
+  <meta name="description" content="Portal resmi Kementerian Agama Kabupaten Banyuwangi - Layanan keagamaan, data, dan statistik untuk masyarakat Banyuwangi" />
+  <meta name="author" content="Kementerian Agama Kabupaten Banyuwangi" />
+
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Kementerian Agama Kabupaten Banyuwangi" />
+  <meta property="og:description" content="Portal resmi Kementerian Agama Kabupaten Banyuwangi - Layanan keagamaan, data, dan statistik untuk masyarakat Banyuwangi" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#4F7942',
+            secondary: '#D4AF37',
+            accent: '#F5F5DC',
+            darkgreen: '#355E3B',
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.5s ease-out',
+            'fade-in-up': 'fadeInUp 0.7s ease-out',
+            'fade-in-down': 'fadeInDown 0.7s ease-out',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' }
+            },
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            },
+            fadeInDown: {
+              '0%': { opacity: '0', transform: 'translateY(-20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            }
+          },
+          backgroundImage: {
+            'mosque-pattern': "url('mosque-pattern.svg')",
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom Styles -->
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .glass-card {
+      background-color: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .glass-nav {
+      background-color: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 glass-nav py-4 px-6 shadow-sm">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="#" class="flex items-center space-x-2">
+        <img src="kemenag-logo.svg" alt="Logo Kementerian Agama" class="h-10 w-auto" />
+        <div class="flex flex-col">
+          <span class="font-bold text-lg">Kementerian Agama</span>
+          <span class="text-xs -mt-1">Kabupaten Banyuwangi</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-1">
+        <a href="#" class="px-4 py-2 rounded-md text-sm font-medium bg-primary text-white">Beranda</a>
+        <a href="#" class="px-4 py-2 rounded-md text-sm font-medium hover:bg-primary/10">Layanan</a>
+        <a href="#" class="px-4 py-2 rounded-md text-sm font-medium hover:bg-primary/10">Data Keagamaan</a>
+        <a href="#" class="px-4 py-2 rounded-md text-sm font-medium hover:bg-primary/10">Statistik</a>
+        <a href="#" class="px-4 py-2 rounded-md text-sm font-medium hover:bg-primary/10">Tentang</a>
+        <button class="ml-2 p-2 rounded-md hover:bg-gray-100">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Toggle -->
+      <div class="flex md:hidden items-center space-x-2">
+        <button class="p-2 rounded-md hover:bg-gray-100">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+        <button class="p-2 rounded-md hover:bg-gray-100">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="relative overflow-hidden min-h-[85vh] flex items-center pt-16">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 bg-mosque-pattern opacity-[0.03] z-0"></div>
+    
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="masjid-banyuwangi.jpg" 
+        alt="Hero Background" 
+        class="w-full h-full object-cover object-center filter brightness-[0.85]" 
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/40 to-gray-50"></div>
+    </div>
+    
+    <div class="container mx-auto relative z-10 px-6 pt-20">
+      <div class="max-w-3xl">
+        <div class="inline-block px-3 py-1 bg-primary/10 rounded-full text-primary text-sm font-medium mb-6 animate-fade-in">
+          Kementerian Agama Kabupaten Banyuwangi
+        </div>
+        
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in-up">
+          Melayani Umat, <br class="hidden md:block" />Membangun Peradaban
+        </h1>
+        
+        <p class="text-lg md:text-xl opacity-80 mb-8 animate-fade-in-up">
+          Kementerian Agama Kabupaten Banyuwangi hadir untuk melayani masyarakat dalam kehidupan beragama dan meningkatkan kualitas pelayanan publik.
+        </p>
+        
+        <div class="flex flex-wrap gap-4 animate-fade-in-up">
+          <a href="#" class="inline-flex items-center justify-center px-6 py-3 bg-primary text-white rounded-md font-medium group">
+            Layanan Kami
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          
+          <a href="#" class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 bg-white/80 text-gray-700 rounded-md font-medium">
+            Tentang Kami
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Animated scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+      <div class="w-8 h-12 rounded-full border-2 border-primary flex items-start justify-center p-1">
+        <div class="w-1 h-3 bg-primary rounded-full animate-bounce"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Featured Services Section -->
+  <section class="py-16 px-6">
+    <div class="container mx-auto">
+      <div class="text-center mb-12 max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold mb-4">Layanan Utama</h2>
+        <p class="text-gray-600">
+          Kami menyediakan berbagai layanan untuk memenuhi kebutuhan masyarakat dalam urusan keagamaan dan pendidikan Islam di Banyuwangi.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Service Card 1 -->
+        <div class="glass-card overflow-hidden transition-all duration-300 hover:shadow-md group rounded-lg border border-primary/30">
+          <div class="p-6">
+            <div class="p-3 rounded-full w-fit mb-3 transition-all duration-300 group-hover:scale-110 bg-primary text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                <rect x="9" y="9" width="6" height="6"></rect>
+                <line x1="9" y1="1" x2="9" y2="4"></line>
+                <line x1="15" y1="1" x2="15" y2="4"></line>
+                <line x1="9" y1="20" x2="9" y2="23"></line>
+                <line x1="15" y1="20" x2="15" y2="23"></line>
+                <line x1="20" y1="9" x2="23" y2="9"></line>
+                <line x1="20" y1="14" x2="23" y2="14"></line>
+                <line x1="1" y1="9" x2="4" y2="9"></line>
+                <line x1="1" y1="14" x2="4" y2="14"></line>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Layanan Haji & Umrah</h3>
+            <p class="text-sm text-gray-600 mb-4">
+              Informasi dan pendaftaran haji reguler, haji khusus, dan umrah untuk masyarakat Banyuwangi.
+            </p>
+            <a href="#" class="inline-flex items-center justify-between w-full px-4 py-2 bg-primary text-white rounded-md font-medium group/btn">
+              <span>Informasi Lengkap</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Service Card 2 -->
+        <div class="glass-card overflow-hidden transition-all duration-300 hover:shadow-md group rounded-lg">
+          <div class="p-6">
+            <div class="p-3 rounded-full w-fit mb-3 transition-all duration-300 group-hover:scale-110 bg-primary/10 text-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Nikah & Rujuk</h3>
+            <p class="text-sm text-gray-600 mb-4">
+              Layanan pencatatan pernikahan, rujuk, dan konsultasi keluarga sakinah.
+            </p>
+            <a href="#" class="inline-flex items-center justify-between w-full px-4 py-2 border border-gray-300 rounded-md font-medium group/btn">
+              <span>Informasi Lengkap</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Service Card 3 -->
+        <div class="glass-card overflow-hidden transition-all duration-300 hover:shadow-md group rounded-lg">
+          <div class="p-6">
+            <div class="p-3 rounded-full w-fit mb-3 transition-all duration-300 group-hover:scale-110 bg-primary/10 text-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Pendidikan Madrasah</h3>
+            <p class="text-sm text-gray-600 mb-4">
+              Informasi pendidikan madrasah dan pesantren di Kabupaten Banyuwangi.
+            </p>
+            <a href="#" class="inline-flex items-center justify-between w-full px-4 py-2 border border-gray-300 rounded-md font-medium group/btn">
+              <span>Informasi Lengkap</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Service Card 4 -->
+        <div class="glass-card overflow-hidden transition-all duration-300 hover:shadow-md group rounded-lg">
+          <div class="p-6">
+            <div class="p-3 rounded-full w-fit mb-3 transition-all duration-300 group-hover:scale-110 bg-primary/10 text-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                <rect x="9" y="9" width="6" height="6"></rect>
+                <line x1="9" y1="1" x2="9" y2="4"></line>
+                <line x1="15" y1="1" x2="15" y2="4"></line>
+                <line x1="9" y1="20" x2="9" y2="23"></line>
+                <line x1="15" y1="20" x2="15" y2="23"></line>
+                <line x1="20" y1="9" x2="23" y2="9"></line>
+                <line x1="20" y1="14" x2="23" y2="14"></line>
+                <line x1="1" y1="9" x2="4" y2="9"></line>
+                <line x1="1" y1="14" x2="4" y2="14"></line>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Wakaf & Zakat</h3>
+            <p class="text-sm text-gray-600 mb-4">
+              Layanan dan informasi pengelolaan wakaf dan zakat di Kabupaten Banyuwangi.
+            </p>
+            <a href="#" class="inline-flex items-center justify-between w-full px-4 py-2 border border-gray-300 rounded-md font-medium group/btn">
+              <span>Informasi Lengkap</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-8 text-center">
+        <a href="#" class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 bg-white text-gray-700 rounded-md font-medium">
+          Lihat Semua Layanan
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics Section -->
+  <section class="py-16 px-6 bg-primary/5">
+    <div class="container mx-auto">
+      <div class="text-center mb-12 max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold mb-4">Data & Statistik</h2>
+        <p class="text-gray-600">
+          Gambaran umum data keagamaan di Kabupaten Banyuwangi, diperoleh dari pencatatan resmi Kementerian Agama.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+        <!-- Stat Card 1 -->
+        <div class="glass-card relative overflow-hidden transition-all duration-300 hover:shadow-md rounded-lg">
+          <div class="p-6">
+            <div class="flex justify-between items-start">
+              <div>
+                <h3 class="text-sm font-medium text-gray-600">Total Masjid</h3>
+                <p class="text-3xl font-bold mt-1">1,245</p>
+                <div class="text-xs font-medium mt-1 flex items-center text-green-600">
+                  ↑ 5.2%
+                </div>
+              </div>
+              <div class="p-3 rounded-full bg-primary/10 text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                  <rect x="9" y="9" width="6" height="6"></rect>
+                  <line x1="9" y1="1" x2="9" y2="4"></line>
+                  <line x1="15" y1="1" x2="15" y2="4"></line>
+                  <line x1="9" y1="20" x2="9" y2="23"></line>
+                  <line x1="15" y1="20" x2="15" y2="23"></line>
+                  <line x1="20" y1="9" x2="23" y2="9"></line>
+                  <line x1="20" y1="14" x2="23" y2="14"></line>
+                  <line x1="1" y1="9" x2="4" y2="9"></line>
+                  <line x1="1" y1="14" x2="4" y2="14"></line>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="absolute bottom-0 left-0 w-full h-1 bg-primary/20">
+            <div class="h-full bg-primary animate-pulse w-[10%]"></div>
+          </div>
+        </div>
+        
+        <!-- Stat Card 2 -->
+        <div class="glass-card relative overflow-hidden transition-all duration-300 hover:shadow-md rounded-lg">
+          <div class="p-6">
+            <div class="flex justify-between items-start">
+              <div>
+                <h3 class="text-sm font-medium text-gray-600">Madrasah</h3>
+                <p class="text-3xl font-bold mt-1">325</p>
+                <div class="text-xs font-medium mt-1 flex items-center text-green-600">
+                  ↑ 3.7%
+                </div>
+              </div>
+              <div class="p-3 rounded-full bg-primary/10 text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="absolute bottom-0 left-0 w-full h-1 bg-primary/20">
+            <div class="h-full bg-primary animate-pulse w-[7%]"></div>
+          </div>
+        </div>
+        
+        <!-- Stat Card 3 -->
+        <div class="glass-card relative overflow-hidden transition-all duration-300 hover:shadow-md rounded-lg">
+          <div class="p-6">
+            <div class="flex justify-between items-start">
+              <div>
+                <h3 class="text-sm font-medium text-gray-600">Jamaah Haji 2023</h3>
+                <p class="text-3xl font-bold mt-1">738</p>
+                <div class="text-xs font-medium mt-1 flex items-center text-green-600">
+                  ↑ 12.4%
+                </div>
+              </div>
+              <div class="p-3 rounded-full bg-primary/10 text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="absolute bottom-0 left-0 w-full h-1 bg-primary/20">
+            <div class="h-full bg-primary animate-pulse w-[24%]"></div>
+          </div>
+        </div>
+        
+        <!-- Stat Card 4 -->
+        <div class="glass-card relative overflow-hidden transition-all duration-300 hover:shadow-md rounded-lg">
+          <div class="p-6">
+            <div class="flex justify-between items-start">
+              <div>
+                <h3 class="text-sm font-medium text-gray-600">Pernikahan 2023</h3>
+                <p class="text-3xl font-bold mt-1">4,892</p>
+                <div class="text-xs font-medium mt-1 flex items-center text-red-600">
+                  ↓ 2.1%
+                </div>
+              </div>
+              <div class="p-3 rounded-full bg-primary/10 text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="absolute bottom-0 left-0 w-full h-1 bg-primary/20">
+            <div class="h-full bg-primary animate-pulse w-[4%]"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Chart 1 -->
+        <div class="glass-card overflow-hidden rounded-lg">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Statistik Jamaah Haji</h3>
+            <p class="text-sm text-gray-600 mb-4">Jumlah jamaah haji dari Banyuwangi (2019-2023)</p>
+            <div class="h-64 flex items-center justify-center">
+              <div class="w-full h-full flex items-end justify-between gap-3 px-6">
+                <div class="flex flex-col items-center">
+                  <div class="bg-primary h-[65%] w-10 rounded-t-md"></div>
+                  <span class="text-xs mt-2">2019</span>
+                </div>
+                <div class="flex flex-col items-center">
+                  <div class="bg-primary h-[0%] w-10 rounded-t-md"></div>
+                  <span class="text-xs mt-2">2020</span>
+                </div>
+                <div class="flex flex-col items-center">
+                  <div class="bg-primary h-[0%] w-10 rounded-t-md"></div>
+                  <span class="text-xs mt-2">2021</span>
+                </div>
+                <div class="flex flex-col items-center">
+                  <div class="bg-primary h-[52%] w-10 rounded-t-md"></div>
+                  <span class="text-xs mt-2">2022</span>
+                </div>
+                <div class="flex flex-col items-center">
+                  <div class="bg-primary h-[74%] w-10 rounded-t-md"></div>
+                  <span class="text-xs mt-2">2023</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Chart 2 -->
+        <div class="glass-card overflow-hidden rounded-lg">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Komposisi Agama di Banyuwangi</h3>
+            <p class="text-sm text-gray-600 mb-4">Persentase pemeluk agama di Kabupaten Banyuwangi</p>
+            <div class="h-64 flex items-center justify-center">
+              <div class="w-44 h-44 rounded-full border-8 border-gray-200 relative">
+                <div class="absolute inset-0 border-8 border-t-primary border-r-primary border-b-primary border-l-primary rounded-full" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0, 95% 0, 95% 95%, 5% 95%, 5% 5%, 95% 5%);">
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <div>
+                    <div class="text-2xl font-bold">95%</div>
+                    <div class="text-xs text-center">Islam</div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-2 ml-6">
+                <div class="flex items-center gap-2">
+                  <div class="w-3 h-3 bg-primary rounded-full"></div>
+                  <span class="text-xs">Islam - 95%</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <div class="w-3 h-3 bg-secondary rounded-full"></div>
+                  <span class="text-xs">Kristen - 2%</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <div class="w-3 h-3 bg-accent rounded-full"></div>
+                  <span class="text-xs">Katolik - 1.5%</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <div class="w-3 h-3 bg-darkgreen rounded-full"></div>
+                  <span class="text-xs">Hindu - 1%</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <div class="w-3 h-3 bg-gray-400 rounded-full"></div>
+                  <span class="text-xs">Buddha - 0.3%</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <div class="w-3 h-3 bg-gray-600 rounded-full"></div>
+                  <span class="text-xs">Konghucu - 0.2%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-8 text-center">
+        <a href="#" class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 bg-white text-gray-700 rounded-md font-medium">
+          Lihat Statistik Lengkap
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Services -->
+  <section class="py-16 px-6">
+    <div class="container mx-auto">
+      <div class="text-center mb-12 max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold mb-4">Layanan Populer</h2>
+        <p class="text-gray-600">
+          Layanan yang paling banyak diakses oleh masyarakat Banyuwangi.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Popular Service Card 1 -->
+        <div class="glass-card overflow-hidden transition-all duration-300 hover:shadow-md group rounded-lg">
+          <div class="p-6">
+            <div class="p-3 rounded-full w-fit mb-3 transition-all duration-300 group-hover:scale-110 bg-primary/10 text-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Rekomendasi Paspor Haji/Umrah</h3>
+            <p class="text-sm text-gray-600 mb-4">
+              Pengurusan rekomendasi paspor untuk keperluan ibadah haji dan umrah.
+            </p>
+            <a href="#" class="inline-flex items-center justify-between w-full px-4 py-2 border border-gray-300 rounded-md font-medium group/btn">
+              <span>Informasi Lengkap</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Popular Service Card 2 -->
+        <div class="glass-card overflow-hidden transition-all duration-300 hover:shadow-md group rounded-lg">
+          <div class="p-6">
+            <div class="p-3 rounded-full w-fit mb-3 transition-all duration-300 group-hover:scale-110 bg-primary/10 text-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Pendaftaran Nikah</h3>
+            <p class="text-sm text-gray-600 mb-4">
+              Prosedur dan persyaratan pendaftaran nikah di KUA.
+            </p>
+            <a href="#" class="inline-flex items-center justify-between w-full px-4 py-2 border border-gray-300 rounded-md font-medium group/btn">
+              <span>Informasi Lengkap</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Popular Service Card 3 -->
+        <div class="glass-card overflow-hidden transition-all duration-300 hover:shadow-md group rounded-lg">
+          <div class="p-6">
+            <div class="p-3 rounded-full w-fit mb-3 transition-all duration-300 group-hover:scale-110 bg-primary/10 text-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Legalisir Ijazah Madrasah</h3>
+            <p class="text-sm text-gray-600 mb-4">
+              Layanan legalisir ijazah dari berbagai tingkat pendidikan madrasah.
+            </p>
+            <a href="#" class="inline-flex items-center justify-between w-full px-4 py-2 border border-gray-300 rounded-md font-medium group/btn">
+              <span>Informasi Lengkap</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="relative py-20 px-6 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="cta-background.jpg" 
+        alt="Call to Action Background" 
+        class="w-full h-full object-cover filter brightness-[0.3]" 
+      />
+    </div>
+    
+    <div class="container mx-auto relative z-10">
+      <div class="max-w-3xl mx-auto text-center text-white">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 animate-fade-in-down">
+          Butuh Informasi Lebih Lanjut?
+        </h2>
+        <p class="text-lg opacity-90 mb-8 animate-fade-in-down">
+          Tim kami siap membantu menjawab pertanyaan Anda seputar layanan Kementerian Agama Kabupaten Banyuwangi.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 animate-fade-in-up">
+          <a href="#" class="inline-flex items-center justify-center px-6 py-3 bg-white text-primary hover:bg-white/90 rounded-md font-medium">
+            Hubungi Kami
+          </a>
+          <a href="#" class="inline-flex items-center justify-center px-6 py-3 border border-white text-white hover:bg-white/10 rounded-md font-medium">
+            FAQ
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-16 px-6">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div>
+          <div class="flex items-center space-x-2 mb-6">
+            <img src="kemenag-logo.svg" alt="Logo Kementerian Agama" class="h-10 w-auto invert" />
+            <div class="flex flex-col">
+              <span class="font-bold text-lg">Kementerian Agama</span>
+              <span class="text-xs -mt-1">Kabupaten Banyuwangi</span>
+            </div>
+          </div>
+          <p class="text-gray-400 text-sm mb-4">
+            Melayani dengan sepenuh hati untuk membangun peradaban yang lebih baik bagi masyarakat Banyuwangi.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="font-bold text-lg mb-4">Layanan</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white text-sm">Haji & Umrah</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white text-sm">Nikah & Rujuk</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white text-sm">Pendidikan Madrasah</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white text-sm">Wakaf & Zakat</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white text-sm">Legalisir Ijazah</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="font-bold text-lg mb-4">Tautan</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white text-sm">Beranda</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white text-sm">Tentang Kami</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white text-sm">Data & Statistik</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white text-sm">Berita</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white text-sm">Kontak</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="font-bold text-lg mb-4">Kontak</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-gray-400 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span class="text-gray-400 text-sm">Jl. A. Yani No. 101, Banyuwangi, Jawa Timur 68416</span>
+            </li>
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-gray-400 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span class="text-gray-400 text-sm">(0333) 123456</span>
+            </li>
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-gray-400 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span class="text-gray-400 text-sm">kemenag.banyuwangi@kemenag.go.id</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400 text-sm">
+        <p>&copy; 2023 Kementerian Agama Kabupaten Banyuwangi. Hak Cipta Dilindungi.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
